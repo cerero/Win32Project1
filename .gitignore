@@ -43,5 +43,10 @@ Temporary Items
 .apdisk
 
 # directory
-Debug
-Release
+Debug/
+Release/
+ipch/
+
+#c++ object file
+*.obj
+*.ipch

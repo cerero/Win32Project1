@@ -21,7 +21,7 @@ extern HWND      main_window_handle; // globally track main window
 int DEMO_8_10_CONSOLE::init(void *param, int num_parms){
 	int index;         // looping var
 	char filename[80]; // used to build up files names
-
+	
 	// initialize directdraw 
 	DDraw_Init(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP);
 
