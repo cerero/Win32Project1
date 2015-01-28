@@ -22,7 +22,7 @@ int DEMO_8_10_CONSOLE::init(void *param, int num_parms){
 	int index;         // looping var
 	char filename[80]; // used to build up files names
 
-	// initialize directdraw
+	// initialize directdraw 
 	DDraw_Init(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP);
 
 	// load in each page of the scrolling background
