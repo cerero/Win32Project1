@@ -4,8 +4,10 @@
 #include "stdafx.h"
 #include "Win32Project1.h"
 #include "t3dconsole.h"
-#include "DEMO_8_10_CONSOLE.h"
-
+//#include "DEMO_8_10_CONSOLE.h"
+//#include "DEMO8_11_16b_CONSOLE.h"
+//#include "demo8_11.h"
+#include "demo8_12.h"
 #define MAX_LOADSTRING 100
 
 // 全局变量: 
@@ -66,8 +68,41 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 		}
 	}*/
 
+	/*
+	if (WINDOWED_APP)
+	{
+		// now resize the window, so the client area is the actual size requested
+		// since there may be borders and controls if this is going to be a windowed app
+		// if the app is not windowed then it won't matter
+		RECT window_rect = { 0, 0, WINDOW_WIDTH - 1, WINDOW_HEIGHT - 1 };
+
+		// make the call to adjust window_rect
+		AdjustWindowRectEx(&window_rect,
+			GetWindowStyle(main_window_handle),
+			GetMenu(main_window_handle) != NULL,
+			GetWindowExStyle(main_window_handle));
+
+		// save the global client offsets, they are needed in DDraw_Flip()
+		window_client_x0 = -window_rect.left;
+		window_client_y0 = -window_rect.top;
+
+		// now resize the window with a call to MoveWindow()
+		MoveWindow(main_window_handle,
+			0, // x position
+			0, // y position
+			window_rect.right - window_rect.left, // width
+			window_rect.bottom - window_rect.top, // height
+			TRUE);
+
+		// show the window, so there's no garbage on first render
+		ShowWindow(main_window_handle, SW_SHOW);
+	} // end if windowed
+	*/
 	// initialize game here
-	DEMO_8_10_CONSOLE demo;
+	//DEMO_8_10_CONSOLE demo;
+	//DEMO8_11_16b_CONSOLE demo;
+	//demo8_11 demo;
+	demo8_12 demo;
 	Game_Init(demo);
 
 	// enter main event loop

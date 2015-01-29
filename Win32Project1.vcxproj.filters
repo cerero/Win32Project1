@@ -45,6 +45,15 @@
     <ClInclude Include="DEMO_8_10_CONSOLE.h">
       <Filter>头文件\chap8</Filter>
     </ClInclude>
+    <ClInclude Include="DEMO8_11_16b_CONSOLE.h">
+      <Filter>头文件\chap8</Filter>
+    </ClInclude>
+    <ClInclude Include="demo8_11.h">
+      <Filter>头文件\chap8</Filter>
+    </ClInclude>
+    <ClInclude Include="demo8_12.h">
+      <Filter>头文件\chap8</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -57,6 +66,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DEMO_8_10_CONSOLE.cpp">
+      <Filter>源文件\chap8</Filter>
+    </ClCompile>
+    <ClCompile Include="DEMO8_11_16b_CONSOLE.cpp">
+      <Filter>源文件\chap8</Filter>
+    </ClCompile>
+    <ClCompile Include="demo8_11.cpp">
+      <Filter>源文件\chap8</Filter>
+    </ClCompile>
+    <ClCompile Include="demo8_12.cpp">
       <Filter>源文件\chap8</Filter>
     </ClCompile>
   </ItemGroup>

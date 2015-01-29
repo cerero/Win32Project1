@@ -2732,6 +2732,9 @@ int Draw_Bitmap(BITMAP_IMAGE_PTR source_bitmap, UCHAR *dest_buffer, int lpitch, 
 	// note this function does NOT clip, so be carefull!!!
 
 	// test if this bitmap is loaded
+	if (dest_buffer == NULL)
+		return 0;
+
 	if (!(source_bitmap->attr & BITMAP_ATTR_LOADED))
 		return(0);
 
@@ -3210,7 +3213,7 @@ int Load_Bitmap_File(BITMAP_FILE_PTR bitmap, char *filename)
 
 		// now read the file in
 		//_lread(file_handle, temp_buffer, bitmap->bitmapinfoheader.biSizeImage);
-		fin.read((char *)bitmap->buffer, bitmap->bitmapinfoheader.biSizeImage);
+		fin.read((char *)temp_buffer, bitmap->bitmapinfoheader.biSizeImage);
 		// now convert each 24 bit RGB value into a 16 bit value
 		for (index = 0; index < bitmap->bitmapinfoheader.biWidth*bitmap->bitmapinfoheader.biHeight; index++)
 		{
@@ -3239,7 +3242,13 @@ int Load_Bitmap_File(BITMAP_FILE_PTR bitmap, char *filename)
 				color = _RGB16BIT565(red, green, blue);
 
 			} // end if 565
-
+			/*
+			else if (dd_pixel_format == DD_PIXEL_FORMATALPHA888){
+				UCHAR blue = (temp_buffer[index * 3 + 0]),
+					green = (temp_buffer[index * 3 + 1]),
+					red = (temp_buffer[index * 3 + 2]);
+				color = _RGB32BIT(0xff, blue, green, red);
+			}*/
 			// write color to buffer
 			((USHORT *)bitmap->buffer)[index] = color;
 
@@ -3943,6 +3952,9 @@ int Color_Scan(int x1, int y1, int x2, int y2,
 {
 	// this function implements a crude collision technique
 	// based on scanning for a range of colors within a rectangle
+
+	if (scan_buffer == NULL)
+		return 0;
 
 	// clip rectangle
 

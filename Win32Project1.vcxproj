@@ -86,21 +86,27 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="chap8\t3dlib1.h" />
+    <ClInclude Include="demo8_11.h" />
+    <ClInclude Include="DEMO8_11_16b_CONSOLE.h" />
     <ClInclude Include="DEMO_8_10_CONSOLE.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="t3dconsole.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Win32Project1.h" />
+    <ClInclude Include="demo8_12.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="chap8\t3dlib1.cpp" />
+    <ClCompile Include="demo8_11.cpp" />
+    <ClCompile Include="DEMO8_11_16b_CONSOLE.cpp" />
     <ClCompile Include="DEMO_8_10_CONSOLE.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Win32Project1.cpp" />
+    <ClCompile Include="demo8_12.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Win32Project1.rc" />

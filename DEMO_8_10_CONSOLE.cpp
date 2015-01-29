@@ -252,13 +252,14 @@ int DEMO_8_10_CONSOLE::main(void *param, int num_parms){
 }
 
 int DEMO_8_10_CONSOLE::shutdown(void *param, int num_parms){
+	return 1;
 	// kill the landscape
 	for (int index = 0; index<3; index++)
 		Destroy_Bitmap(&landscape[index]);
 
 	// kill skelaton
 	Destroy_BOB(&skelaton);
-
+	
 	// shutdonw directdraw
 	DDraw_Shutdown();
 	return 1;
